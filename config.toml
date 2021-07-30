@@ -32,7 +32,7 @@ enableEmoji = true
   orgLocal = "Paris"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
-  logo = "/img/blogophonic-mark-dark.png"
+  logo = "/img/plant_1.png"
   mainSections = ["blog", "project", "talk"]
   navallcaps = false
   # show/hide social icons in site header & footer
@@ -48,7 +48,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "water"
+  theme = "forest"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
@@ -81,22 +81,6 @@ enableEmoji = true
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/wesleysatelis/"
-  [[params.social]]
-      icon      = "instagram" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = ""
-  [[params.social]]
-      icon      = "facebook-square" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = ""
-  [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = ""
-  [[params.social]]
-      icon      = "rss" # icon name without the 'fa-'
-      icon_pack = "fas"
-      url       = ""
 
 [taxonomies]
   category = "categories"
