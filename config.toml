@@ -1,4 +1,4 @@
-baseURL = "wesleysatelis.rbind.io"
+baseURL = "/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Personal website of Wesley Satelis"
