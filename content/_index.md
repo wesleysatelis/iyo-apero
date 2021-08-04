@@ -1,7 +1,7 @@
 ---
 title: "Wesley Satelis"
 subtitle: "Estatístico e cientista de dados"
-description: "Sou estatístico e cientista de dados, formado pela Universidade Estadual de Campinas. Já atuei no setor da saúde, da agricultura e meio ambiente e atualmente no fianceiro. Fascinado pela solução de problemas do mundo real e de importancia científica e social, tento disseminar conhecimentos em estatística e análise de dados por meio de aplicações de técnicas e ferramentas atuais. Fique a vontade para entrar em contato."
+description: "Sou estatístico e cientista de dados, formado pela Universidade Estadual de Campinas. Já atuei no setor da saúde, da agricultura e meio ambiente e atualmente no fianceiro. Fascinado por soluções de problemas de importancia científica e social, usando métodos e ferramentas eficientes e modernas. Fique a vontade para entrar em contato."
 date: 2019-02-18T12:27:33-06:00
 images:
   - img/capa.jpg
