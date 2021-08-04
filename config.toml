@@ -95,27 +95,27 @@ enableEmoji = true
   series = "series"
   tag = "tags"
 
-[menu]
-  [[menu.header]]
-    name = "About"
-    title = "About Blogophonic"
-    url = "/about/"
-    weight = 1
-  [[menu.header]]
-    name = "Blog"
-    title = "Blog"
-    url = "/blog/"
-    weight = 2
-  [[menu.header]]
-    name = "Projects"
-    title = "Project Portfolio"
-    url = "/project/"
-    weight = 3
-  [[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
-    weight = 4
+# [menu]
+#  [[menu.header]]
+#    name = "About"
+#    title = "About Blogophonic"
+#    url = "/about/"
+#    weight = 1
+#  [[menu.header]]
+#    name = "Blog"
+#    title = "Blog"
+#    url = "/blog/"
+#    weight = 2
+#  [[menu.header]]
+#    name = "Projects"
+#    title = "Project Portfolio"
+#    url = "/project/"
+#    weight = 3
+#  [[menu.header]]
+#    name = "Talks"
+#    title = "Talks"
+#    url = "/talk/"
+#    weight = 4
     
   # Configure footer  
   [[menu.footer]]
@@ -130,6 +130,8 @@ enableEmoji = true
     weight = 2
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
+
+
 [privacy]
   [privacy.disqus]
     disable = false
