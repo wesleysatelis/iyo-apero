@@ -1,10 +1,10 @@
 ---
 title: "Wesley Satelis"
-subtitle: "Social media strategy @ Savoir"
-description: "Not all themes are created equal. With Blogophonic we set out to create a clean theme with the right features for a serious blog. We also wanted Blogophonic to be a pleasure to modify, so we built it with Tachyons, CSS Grid and packed it full of configurable options."
+subtitle: "Estatístico e cientista de dados"
+description: "Sou estatístico e cientista de dados, formado pela Universidade Estadual de Campinas. Já atuei no setor da saúde, da agricultura e meio ambiente e atualmente no fianceiro. Sou fascinado pela solução de problemas do mundo real e de importancia social e científica. Com este site, tento disceminar conhecimentos em estatística e análise de dados por meio de aplicações interessantes e utilizando técnicas e ferramentas atuais. Fique a vontade para entrar em contato."
 date: 2019-02-18T12:27:33-06:00
 images:
-  - img/revoir.jpg
+  - img/capa.jpg
 image_left: false
 text_align_left: false
 show_social_links: true # specify social accounts in site config
