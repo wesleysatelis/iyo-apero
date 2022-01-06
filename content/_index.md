@@ -1,14 +1,14 @@
 ---
 title: "Wesley Satelis"
-subtitle: "Estatístico e cientista de dados"
-description: "Sou estatístico pela Universidade Estadual de Campinas e já atuei no setores da saúde, agricultura e meio ambiente e atualmente no financeiro. Fascinado por soluções de problemas de importancia científica e social, busco disseminar conhecimentos em análise de dados, com métodos consolidados e resultados reprodutíveis. Fique à vontade para entrar em contato."
+subtitle: "Statistician and Data Scientist"
+description: "I'm a Statistician and Data Scientist from the University of Campinas, with experience in applying statistical techniques in the fields of medicine, biology, finance and agriculture and the environment. Fascinated by solutions to problems of social and scientific importance, I try to disseminate knowledge on data analysis, with focus on consolidated methods and reproducible results. If you think we could work together, feel free to get in touch."
 date: 2019-02-18T12:27:33-06:00
 images:
   - img/capa.jpg
 image_left: false
 text_align_left: false
 show_social_links: true # specify social accounts in site config
-show_action_link: true
+show_action_link: false
 action_link: /about
 action_label: "Read More &rarr;"
 action_type: text # text, button
