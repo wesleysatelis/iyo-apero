@@ -1,7 +1,7 @@
 ---
 title: To the restless minds
 description: |
-  These are things I fing interesting and wish to share with anyone interested, my e-mail box is open to discuss any of these topics.
+  Here you'll find some data analysis with discussions about statistical methods and data exploration. Hope you find them as interesting as I did, my e-mail box is open for discussions.
 author: ""
 show_post_thumbnail: true
 show_author_byline: true
