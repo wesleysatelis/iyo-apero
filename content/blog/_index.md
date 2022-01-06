@@ -1,9 +1,8 @@
 ---
-title: A Blog That Works
+title: To the restless minds
 description: |
-  This is a fully featured blog that supports categories, 
-  tags, series, and pagination.
-author: "The R Markdown Team @RStudio"
+  These are things I fing interesting and wish to share with anyone interested, my e-mail box is open to discuss any of these topics.
+author: ""
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
