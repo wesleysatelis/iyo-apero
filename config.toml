@@ -96,11 +96,11 @@ enableEmoji = true
   tag = "tags"
 
 [menu]
-[[menu.header]]
-  name = "About"
-  title = "About Blogophonic"
-  url = "/about/"
-  weight = 1
+#[[menu.header]]
+#  name = "About"
+#  title = "About Blogophonic"
+#  url = "/about/"
+#  weight = 1
 [[menu.header]]
   name = "Blog"
   title = "Blog"
