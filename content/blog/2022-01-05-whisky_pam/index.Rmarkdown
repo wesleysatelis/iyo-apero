@@ -7,11 +7,13 @@ author: "Wesley Satelis"
 draft: true
 # layout options: single, single-sidebar
 layout: single
-bibliography: "referencias.bib"
+# bibliography: "referencias.bib"
 
 categories:
 - evergreen
 ---
+
+
 
 
 # Introdução
