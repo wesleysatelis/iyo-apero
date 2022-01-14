@@ -1,5 +1,5 @@
 ---
-title: Data and stats
+title: Data & stats
 description: |
   Some data analysis with discussions about statistical methods and data exploration, hope you find them as interesting as I did.
 author: ""
