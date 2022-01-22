@@ -2,7 +2,7 @@
 title: Data & stats
 description: |
   Some data analysis with discussions about statistical methods and data exploration, hope you find them as interesting as I did.
-author: ""
+author: "The R Markdown Team @RStudio"
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
