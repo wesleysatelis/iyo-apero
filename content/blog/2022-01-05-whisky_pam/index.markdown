@@ -4,7 +4,7 @@ subtitle: ""
 excerpt: "Using Partition Around Medoids (PAM) for grouping brands of whisky."
 date: 2022-01-14
 author: "Wesley Satelis"
-draft: true
+draft: false
 # layout options: single, single-sidebar
 layout: single
 bibliography: "referencias.bib"
