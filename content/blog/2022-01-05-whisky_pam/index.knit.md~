@@ -76,129 +76,13 @@ Foram consideradas somente avaliações feitas na Irlanda e marcas de whiskies c
 A Figura 1 mostra gráficos de agrupamentos para diferentes números de grupos prefixados. Os gráficos apenas ilustram o número de itens em cada grupo, devemos apenas nos atentar às cores, que discriminam os grupos, e ao número de observações em cada grupo. A variação ao longo do eixo $y$ existe apenas para que que as observações não se sobreponham. Todos os agrupamentos foram feitos utilizando o método PAM, variando somente o número de grupos.
 
 
-```{r}
-# load("dados_tratados.RData")
-library(tidyverse)
-library(cluster)
-library(factoextra)
-library(data.table)
-
-data <- read_csv("atividade1.csv") %>%
-  filter(Country == "Ireland" & Votes >= 5) %>%
-  select(-7) %>%
-  drop_na() %>%
-  group_by(Brand) %>%
-  mutate(nota_suavizada =  ((Votes * (Rating/100) + 1)/(Votes + 2))*100) %>%
-  ungroup()
-
-data_cluster <- select(data, nota_suavizada)
-
-data <- setDT(data)
-for(i in 2:5){
-  cluster <- pam(data_cluster, i, keep.diss = T)$clustering
-  data[, paste0("K = ", i) := cluster ]
-}
-
-data <- as_tibble(data) %>%
-  gather(key="K", value="Cluster", "K = 2":"K = 5")
-
-k_uniq <- unique(data$K)
-sil_plot <- list()
-for(i in 1:4){
-  sil <- filter(data, K == k_uniq[i])
-  media_sil <- summary(silhouette(sil$Cluster, dist(sil$nota_suavizada)))$avg.width
-  # data_sil <- silhouette(sil$Cluster, dist(sil$nota_suavizada))
-  sil_plot[[i]] <- fviz_silhouette(silhouette(sil$Cluster, dist(sil$nota_suavizada))) +
-    theme_bw() + theme(axis.title.x=element_blank(),
-                       axis.text.x=element_blank(),
-                       axis.ticks.x=element_blank()) +
-                       # legend.title = "Grupo") + 
-    guides(color=guide_legend(title="Grupo"), fill=guide_legend(title="Grupo")) +
-    ylab("Comprimento da silhueta Si") +
-    ggtitle(paste0("Comprimento médio das silhuetas: ", round(media_sil, 4)))
-}
-```
 
 
-```{r, fig.height=3, fig.width=9, fig.cap="Gráficos de diferentes agrupamentos com K grupos. Variações ao longo do eixo $y$ foram adicionadas apenas para que que as observações não se sobreponham e existem apenas na visualização dos dados."}
-ggplot(data) +
-  geom_jitter(aes(x=nota_suavizada, y=as.factor(Cluster),
-                  colour=as.factor(Cluster))) +
-  facet_wrap(~K, nrow=1) + 
-  theme_bw() +
-  labs(color='Grupo') + xlab("Notas suavizadas") + ylab("") +
-    theme(axis.text.y=element_blank(),
-          axis.ticks.y=element_blank())
-```
-
-Na Figura 2, temos os gráficos de silhueta para os mesmos agrupamentos expostos na Figura 1. Os agrupamentos com 4 e 5 grupos resultaram em alguns valores negativos de silhueta, apesar de não serem valores altos, é preferível evitar este tipo de resultado. As médias das silhuetas em cada agrupamento são maiores nos agrupamentos com 2 e 3 grupos, estes também não apresentam silhuetas negativas. Como o agrupamento com 2 grupos resultou em uma média de silhuetas maior que os demais, podemos dizer que este é o melhor cadidato dentre os testados. Assim, as notas de usuários foram agrupadas em dois grupos apenas.
-
-```{r, fig.height=4.5, fig.width=9, fig.cap="Gráficos de silhueta para diferentes agrupamentos com K grupos."}
-library(gridExtra)
-grid.arrange(sil_plot[[1]], sil_plot[[2]], sil_plot[[3]], sil_plot[[4]])
-```
-
-Com o gráfico da Figura 3, temos o objetivo de comparar as classificações dadas por especialistas com os grupos formados pelas notas dos usuários. As notas dos especialistas e dos usuários não convergem e por fim temos cinco classificações em comparação com dois grupos, respectivamente.
-
-```{r, fig.height=3, fig.width=6, fig.cap="Comparação do agrupamento de dois grupos, usando notas de usuários como atributo, e classificações dadas por especialistas em whiskies. Variações ao longo do eixo $y$ foram adicionadas apenas para que que as observações não se sobreponham e existem apenas na visualização dos dados."}
-data %>% 
-  filter(K == "K = 2") %>% 
-  ggplot(aes(x=nota_suavizada, y=as.factor(Cluster))) + 
-  geom_jitter(aes(colour=`WB Ranking`, shape=as.factor(Cluster)), size=2) + 
-  xlab("Nota suavizada") + ylab("") + 
-  labs(color="Classificação dos\nespecialistas", shape="Nota dos usuários") +
-  scale_x_continuous(breaks = round(seq(min(data$nota_suavizada),
-                                        max(data$nota_suavizada), by = 5), 0)) +theme_bw() +
-    theme(               axis.text.y=element_blank(),
-                       axis.ticks.y=element_blank())
-```
-
-# Conclusões
-
-Apesar de parecer que o agrupamento foi erroneo por não concordar com as classificações de especialistas, vale lembrar que se tratam de grupos de pessoas com habilidades diferentes.
-
-Examinando mais de perto, nota-se que os usuários e especialistas tendem a concordar quanto às melhores marcas de whisky, marcas C. E também na maior parte das marcas D.
-
-Faz sentido que as notas de especialistas apresentem mais grupos do que as notas de usuários, já que espera-se que estes sejam leigos no assunto e que especialistas tenham o paladar mais apurado para whiskies e sejam capazes de discernir melhor entre as categorias.
-
-# Referências
-
-::: {#refs}
-:::
 
 
-# Anexos
 
-```{r, echo=T, eval=F, attr.source='.numberLines'}
-library(tidyverse)
-library(cluster)
-library(data.table)
 
-data <- read_csv("atividade1.csv") %>%
-  filter(Country == "Ireland" & Votes >= 5) %>%
-  select(-X7) %>%
-  drop_na() %>%
-  group_by(Brand) %>%
-  mutate(nota_suavizada =  ((Votes * (Rating/100) + 1)/(Votes + 2))*100) %>%
-  ungroup()
 
-data_cluster <- select(data, nota_suavizada)
 
-data <- setDT(data)
-for(i in 2:5){
-  cluster <- pam(data_cluster, i, keep.diss = T)$clustering
-  data[, paste0("K = ", i) := cluster ]
-}
-
-data <- as_tibble(data) %>%
-  gather(key="K", value="Cluster", "K = 2":"K = 5")
-
-k_uniq <- unique(data$K)
-silhuetas <- list()
-for(i in 1:4){
-  sil <- filter(data, K == k_uniq[i])
-  silhuetas[[i]] <- silhouette(sil$Cluster, dist(sil$nota_suavizada))
-}
-```
 
 
