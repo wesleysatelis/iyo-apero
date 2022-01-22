@@ -1,7 +1,7 @@
 ---
 title: Data & stats
 description: |
-  Some data analysis with discussions about statistical methods and data exploration, hope you find them as interesting as I did.
+  Some data analysis with discussions about statistical methods and data exploration. I hope you find them as interesting as I did.
 author: "The R Markdown Team @RStudio"
 show_post_thumbnail: true
 show_author_byline: true
