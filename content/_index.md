@@ -1,7 +1,7 @@
 ---
 title: "Wesley Satelis"
 subtitle: "Statistician and Data Scientist"
-description: "I’m a Statistician and Data Scientist from the University of Campinas, with experience in applying statistical techniques in the fields of medicine, biology, agriculture and the environment, and finance. Fascinated by solutions to problems of social and scientific importance, I try to disseminate knowledge on data analysis, with a focus on consolidated methods and reducibility. If you think we could work together, feel free to get in touch."
+description: "I’m a Statistician and Data Scientist from the University of Campinas, with experience in applying statistical techniques in the fields of medicine, biology, agriculture and the environment, and finance. Fascinated by solutions to problems of social and scientific importance, I try to disseminate knowledge on data analysis, with a focus on consolidated methods and reproducibility. If you think we could work together, feel free to get in touch."
 date: 2019-02-18T12:27:33-06:00
 images:
   - img/capa.jpg
