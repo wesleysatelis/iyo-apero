@@ -2,15 +2,15 @@
 title: "Grouping Whisky Brands"
 subtitle: ""
 excerpt: "Using Partition Around Medoids (PAM) for grouping brands of whisky."
-date: 2022-01-14
+date: 2022-04-09
 author: "Wesley Satelis"
 draft: false
-# layout options: single, single-sidebar
-layout: single
+layout options: single, single-sidebar
+# layout: single
 bibliography: "referencias.bib"
 
-categories:
-- evergreen
+# categories:
+# - evergreen
 ---
 
 In this post we will be using the unsupervised grouping method Partition Around Medoids (PAM), to create clusters of whisky brands based on ratings given by users of the website https://www.whiskybase.com/whiskies/brands. The PAM method is a variation of the widely known k-means, the main difference from k-means and PAM is that PAM uses observations in the dataset as cluster centroids, while k-means uses the cluster mean instead.
