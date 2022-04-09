@@ -3,9 +3,9 @@ library(cluster)
 library(factoextra)
 library(data.table)
 
-data <- read_csv("atividade1.csv") %>% 
+data <- read_csv("content/blog/2022-01-05-whisky_pam/atividade1.csv") %>% 
   filter(Country == "Ireland" & Votes >= 5) %>% 
-  select(-X7) %>% 
+  select(-`...7`) %>% 
   drop_na() %>% 
   group_by(Brand) %>% 
   mutate(nota_suavizada =  ((Votes * (Rating/100) + 1)/(Votes + 2))*100) %>% 
@@ -47,7 +47,7 @@ for(i in 1:4){
 grid.arrange(sil_plot[[1]], sil_plot[[2]], sil_plot[[3]], sil_plot[[4]])
 
 data %>% 
-  filter(K == "K = 2") %>% 
+  filter(K == "K = 3") %>% 
   ggplot(aes(x=nota_suavizada, y=as.factor(Cluster))) + 
   geom_jitter(aes(colour=`WB Ranking`), size=2) + 
   theme_bw() + 
