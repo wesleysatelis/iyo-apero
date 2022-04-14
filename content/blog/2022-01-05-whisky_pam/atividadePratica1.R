@@ -1,11 +1,25 @@
+rm(list=ls())
+
 library(tidyverse)
 library(cluster)
 library(factoextra)
 library(data.table)
 
 data <- read_csv("content/blog/2022-01-05-whisky_pam/atividade1.csv") %>% 
+  select(-`...7`)
+
+sort(unique(data$Country))
+
+data %>% 
+  group_by(Country) %>% 
+  summarise(n=n()) %>% 
+  drop_na() %>% 
+  arrange(desc(n)) %>% 
+  kable()
+
+
+data %<>% 
   filter(Country == "Ireland" & Votes >= 5) %>% 
-  select(-`...7`) %>% 
   drop_na() %>% 
   group_by(Brand) %>% 
   mutate(nota_suavizada =  ((Votes * (Rating/100) + 1)/(Votes + 2))*100) %>% 

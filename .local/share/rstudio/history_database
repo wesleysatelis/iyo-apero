@@ -1,0 +1,16 @@
+1649331035300:gc()
+1649331042456:blogdown:::serve_site()
+1649331066466:blogdown:::serve_site()
+1649331104610:?blogdown
+1649331111480:library(blogdown)
+1649331211470:update.packages("blogdown")
+1649331223903:blogdown:::serve_site()
+1649331232723:install.packages("blogdown")
+1649331236433:install.packages("blogdown")
+1649331320103:#Clear plots
+1649331320104:if(!is.null(dev.list())) dev.off()
+1649331320105:# Clear console
+1649331320105:cat("\014")
+1649331320106:# Clean workspace
+1649331320106:rm(list=ls())
+1649331324677:blogdown:::serve_site()

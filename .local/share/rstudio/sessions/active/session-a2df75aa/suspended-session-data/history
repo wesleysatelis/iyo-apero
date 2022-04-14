@@ -1,0 +1,16 @@
+gc()
+blogdown:::serve_site()
+blogdown:::serve_site()
+?blogdown
+library(blogdown)
+update.packages("blogdown")
+blogdown:::serve_site()
+install.packages("blogdown")
+install.packages("blogdown")
+#Clear plots
+if(!is.null(dev.list())) dev.off()
+# Clear console
+cat("\014")
+# Clean workspace
+rm(list=ls())
+blogdown:::serve_site()
