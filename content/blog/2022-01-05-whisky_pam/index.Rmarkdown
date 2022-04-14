@@ -102,7 +102,7 @@ for(i in 1:4){
   sil <- filter(data, K == k_uniq[i])
   media_sil <- summary(silhouette(sil$Cluster, dist(sil$nota_suavizada)))$avg.width
   sil_plot[[i]] <- fviz_silhouette(silhouette(sil$Cluster, dist(sil$nota_suavizada)), print.summary=FALSE) +
-    theme_bw() + 
+    theme_light() + 
     theme(axis.title.x=element_blank(),
           axis.text.x=element_blank(),
           axis.ticks.x=element_blank(),
