@@ -6,7 +6,7 @@ date: 2022-04-09
 author: "Wesley Satelis"
 draft: false
 layout options: single, single-sidebar
-# layout: single
+layout: single-sidebar
 bibliography: "referencias.bib"
 
 # categories:
