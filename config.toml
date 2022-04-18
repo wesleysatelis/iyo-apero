@@ -64,7 +64,7 @@ enableEmoji = true
   # customtextFontFamily = "Commissioner"
   # customheadingFontFamily = "Fraunces"
   
-  customtextFontFamily = "Bitter"
+  customtextFontFamily = "Alegreya Sans"
   customheadingFontFamily = "Fraunces"
 
   # alternatively, leave empty and select basic font options: sans-serif or serif
