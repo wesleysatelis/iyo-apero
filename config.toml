@@ -65,7 +65,7 @@ enableEmoji = true
   # customheadingFontFamily = "Fraunces"
   
   customtextFontFamily = "Alegreya Sans"
-  customheadingFontFamily = "Alegreya Sans"
+  customheadingFontFamily = "Commissioner"
 
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
