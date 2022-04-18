@@ -11,7 +11,7 @@ layout: list # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: A Sidebar for Your Thoughts
+  title: More info
   description: |
     Some data analysis with discussions about statistical methods 
     and data exploration, hope you find them as interesting as I did.
@@ -23,7 +23,7 @@ sidebar:
 
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "The R Markdown Team @RStudio"
+  author: "Wesley Satelis"
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
