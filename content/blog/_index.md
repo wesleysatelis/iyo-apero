@@ -16,7 +16,7 @@ sidebar:
     Some data analysis with discussions about statistical methods 
     and data exploration, hope you find them as interesting as I did.
 
-  # author: "The R Markdown Team @RStudio"
+  # author: "Wesley Satelis"
   # text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: false # show ad container
