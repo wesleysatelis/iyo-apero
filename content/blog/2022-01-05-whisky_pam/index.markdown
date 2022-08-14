@@ -13,7 +13,7 @@ bibliography: "referencias.bib"
 # - evergreen
 ---
 
-In this post we will be using the unsupervised grouping method Partition Around Medoids (PAM), to create clusters of whisky brands based on ratings given by users of the website https://www.whiskybase.com/whiskies/brands. The PAM method is a variation of the widely known k-means, the main difference from k-means and PAM is that PAM uses observations in the dataset as cluster centroids, while k-means uses the cluster mean instead.
+In this post we will be using the unsupervised grouping method Partition Around Medoids (PAM), to create clusters of whisky brands based on ratings given by users of the website https://www.whiskybase.com/whiskies/brands. The PAM method is a variation of the widely known k-means, the main difference is that PAM uses observations in the dataset as cluster centroids, and k-means uses the cluster mean instead.
 
 <!-- More details can be found in @van2003new. -->
 
@@ -26,9 +26,9 @@ The original dataset has the following variables.
 -   **Rating:** *(0-100)* Rating given by a regular user to that whisky;
 -   **WB Ranking:** *(A - G)* Ranking based on ratings given by specialists in whisky.
 
-The first part of any data related work should be always exploratory. Even when we use unsupervised methods.
+<!-- The first part of any data related work should be always exploratory. Even when we use unsupervised methods. -->
 
-The following table shows how many whisky brand each country has, I chose to not show countries with less than 10 whisky brands since those have too few brands and wouldn’t yield very interesting results.
+The following table shows how many whisky brand each country has, I chose to discard countries with less than 10 whisky brands since those wouldn’t yield very interesting results.
 
 <table>
 <thead>
